@@ -2,9 +2,9 @@ steps:
   # build image and push to gcr.io
   - name: "gcr.io/cloud-builders/docker"
     # get latest commit hash
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/nginx-cicd:v0.1", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/nginx-cicd:v0.2", "."]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/$PROJECT_ID/nginx-cicd:v0.1"]
+    args: ["push", "gcr.io/$PROJECT_ID/nginx-cicd:v0.2"]
 
   # apply cluster configuration
   - name: "gcr.io/cloud-builders/kubectl"
