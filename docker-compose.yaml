@@ -1,0 +1,26 @@
+version: "1.0"
+services:
+  nginx1:
+    container_name: container-nginx1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: image-nginx:v2.0
+    ports:
+      - "80:80"
+  nginx2:
+    container_name: container-nginx2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: image-nginx:v2.0
+    ports:
+      - "8080:80"
+  nginx3:
+    container_name: container-nginx3
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: image-nginx:v2.0
+    ports:
+      - "8888:80"
