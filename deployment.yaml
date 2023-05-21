@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: nginx-cicd
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: gcr.io/cc-64-sandbox/nginx-cicd:latest
+          image: gcr.io/cc-64-sandbox/nginx-cicd
           ports:
             - containerPort: 80
