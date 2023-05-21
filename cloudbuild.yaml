@@ -14,3 +14,13 @@ steps:
     env:
       - "CLOUDSDK_COMPUTE_ZONE=asia-southeast2"
       - "CLOUDSDK_CONTAINER_CLUSTER=nginx-cluster"
+
+  # expose service
+  - name: "gcr.io/cloud-builders/kubectl"
+    args:
+      - "apply"
+      - "-f"
+      - "service.yaml"
+    env:
+      - "CLOUDSDK_COMPUTE_ZONE=asia-southeast2"
+      - "CLOUDSDK_CONTAINER_CLUSTER=nginx-cluster"
